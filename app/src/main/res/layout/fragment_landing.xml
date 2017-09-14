@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#FBF8F4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#4CBF5C"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登陆"
+            android:textColor="#FFF"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#FFF"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/login_phone_img" />
+
+            <EditText
+                android:id="@+id/landing_number"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="手机" />
+
+            <TextView
+                android:id="@+id/landing_number_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FBF8F4"
+                android:text="请输入手机号" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/login_password_img" />
+
+            <EditText
+                android:id="@+id/landing_pwd"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="密码" />
+
+            <TextView
+                android:id="@+id/landing_pwd_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FBF8F4"
+                android:text="6-16个字符，只支持数字，字母区分大小写" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/landing_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="忘记密码？"
+        android:textColor="#4CBF5C"
+        android:textSize="15sp" />
+
+
+    <Button
+        android:id="@+id/landing_landing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#4CBF5C"
+        android:text="登陆"
+        android:textColor="#FFF"
+        android:textSize="25sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="还没有注册请"
+                android:textColor="#D4D3D3"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/landing_registered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册"
+                android:textColor="#4CBF5C"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.bloodpressure.ui.MainActivity">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="3"
+        android:id="@+id/navi_group"
+        android:orientation="horizontal"
+        android:paddingBottom="30px"
+        android:paddingTop="20px"
+        android:background="@color/colorGray11"
+        >
+
+        <RadioButton
+            android:id="@+id/doctor_bt"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="@drawable/doctor_bt_selecter"
+            android:text="医生在线"
+            android:textSize="35px"
+            android:checked="true"
+            android:textColor="@color/navi_te_color"
+            android:drawablePadding="20px"
+            android:gravity="center"
+            />
+        <RadioButton
+            android:id="@+id/blood_bt"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="@drawable/blood_bt_selecter"
+            android:text="血压管理"
+            android:textSize="35px"
+            android:textColor="@color/navi_te_color"
+            android:gravity="center"
+            android:drawablePadding="20px"
+            />
+        <RadioButton
+            android:id="@+id/persional_bt"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="@drawable/persional_bt_selecter"
+            android:text="个人中心"
+            android:textColor="@color/navi_te_color"
+            android:textSize="35px"
+            android:gravity="center"
+            android:drawablePadding="20px"
+            />
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/show_fm"
+        android:layout_above="@id/navi_group"
+        ></FrameLayout>
+
+</RelativeLayout>
