@@ -59,6 +59,7 @@
                     android:layout_weight="7">
 
                     <TextView
+                        android:id="@+id/location_ln_textview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"

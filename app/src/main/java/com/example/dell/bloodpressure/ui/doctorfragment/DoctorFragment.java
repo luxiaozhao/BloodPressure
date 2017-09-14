@@ -9,7 +9,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.example.dell.bloodpressure.R;
 import com.example.dell.bloodpressure.base.BaseFragment;
@@ -48,6 +48,7 @@ public class DoctorFragment extends BaseFragment implements View.OnClickListener
     HotDoctorBean hotbean;
     @Inject
     RetrofitUtil retrofitUtil;
+    private TextView location_ln_textview;
 
 
     @Override
@@ -86,6 +87,10 @@ public class DoctorFragment extends BaseFragment implements View.OnClickListener
         DaggerAppComponent.create().inject(this);
 
         view = inflater.inflate(R.layout.doctorfragment, null);
+//        Intent intent = getIntent();
+//        String name = intent.getStringExtra("name");
+
+
         location_ln = (RelativeLayout) view.findViewById(R.id.location_ln);
         location_ima = (ImageView) view.findViewById(R.id.location_ima);
         work_ln = (RelativeLayout) view.findViewById(R.id.work_ln);
@@ -96,8 +101,13 @@ public class DoctorFragment extends BaseFragment implements View.OnClickListener
         ask_bt = (RadioButton) view.findViewById(R.id.ask_bt);
         phone_bt = (RadioButton) view.findViewById(R.id.phone_bt);
         hot_gridview = (GridView) view.findViewById(R.id.hot_gridview);
-
+        location_ln_textview = (TextView) view.findViewById(R.id.location_ln_textview);
         query_bt.setOnClickListener(this);
+
+
+//        location_ln_textview
+
+
 
         location_ln.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,9 +116,9 @@ public class DoctorFragment extends BaseFragment implements View.OnClickListener
 
                 startActivity(new Intent(getActivity(),ProvinceFragment.class));
 
-                Toast.makeText(getActivity(),"11111111111",Toast.LENGTH_LONG).show();
+//                Toast.makeText(getActivity(),"跳到省份",Toast.LENGTH_LONG).show();
 
-
+            startActivity(new Intent(getActivity(),ProvinceFragment.class));
 
 
             }

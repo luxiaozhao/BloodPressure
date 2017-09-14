@@ -1,11 +1,14 @@
 package com.example.dell.bloodpressure.ui.doctorfragment;
 
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.dell.bloodpressure.R;
+import com.example.dell.bloodpressure.adapter.MyAdapter;
 import com.example.dell.bloodpressure.base.BaseFragment;
 
 import java.util.ArrayList;
@@ -29,90 +32,87 @@ List<String> provlist=new ArrayList<>();
 
 
         view = inflater.inflate(R.layout.fragment_province,null);
-//        province_listview = (ListView) view.findViewById(R.id.province_listview);
-//
-//
-//
-//        provlist.add("不限");
-//
-//        provlist.add("北京市");
-//
-//        provlist.add("山东省");
-//
-//        provlist.add("山西省");
-//
-//        provlist.add("河北省");
-//
-//        provlist.add("河南省");
-//
-//        provlist.add("天津市");
-//
-//        provlist.add("辽宁省");
-//
-//        provlist.add("黑龙江省");
-//
-//        provlist.add("吉林省");
-//
-//        provlist.add("湖北省");
-//
-//        provlist.add("湖南省");
-//
-//        provlist.add("上海市");
-//
-//        provlist.add("四川省");
-//
-//        provlist.add("重庆市");
-//
-//        provlist.add("陕西省");
-//
-//        provlist.add("甘肃省");
-//
-//        provlist.add("云南省");
-//
-//        provlist.add("新疆维吾尔自治区");
-//
-//        provlist.add("内蒙古自治区");
-//
-//        provlist.add("海南省");
-//
-//        provlist.add("贵州省");
-//
-//        provlist.add("青海省");
-//
-//        provlist.add("广东省");
-//
-//        provlist.add("宁夏回族自治区");
-//
-//        provlist.add("西藏自治区");
-//
-//        provlist.add("广西壮族自治区");
-//
-//        provlist.add("江苏省");
-//
-//        provlist.add("浙江省");
-//
-//        provlist.add("安徽省");
-//
-//        provlist.add("江西省");
-//
-//        provlist.add("福建省");
-//
-//        MyAdapter myAdapter=new MyAdapter(getActivity(),provlist);
-//
-//        province_listview.setAdapter(myAdapter);
+        province_listview = (ListView) view.findViewById(R.id.province_listview);
+
+        provlist.add("不限");
+
+        provlist.add("北京市");
+
+        provlist.add("山东省");
+
+        provlist.add("山西省");
+
+        provlist.add("河北省");
+
+        provlist.add("河南省");
+
+        provlist.add("天津市");
+
+        provlist.add("辽宁省");
+
+        provlist.add("黑龙江省");
+
+        provlist.add("吉林省");
+
+        provlist.add("湖北省");
+
+        provlist.add("湖南省");
+
+        provlist.add("上海市");
+
+        provlist.add("四川省");
+
+        provlist.add("重庆市");
+
+        provlist.add("陕西省");
+
+        provlist.add("甘肃省");
+
+        provlist.add("云南省");
+
+        provlist.add("新疆维吾尔自治区");
+
+        provlist.add("内蒙古自治区");
+
+        provlist.add("海南省");
+
+        provlist.add("贵州省");
+
+        provlist.add("青海省");
+
+        provlist.add("广东省");
+
+        provlist.add("宁夏回族自治区");
+
+        provlist.add("西藏自治区");
+
+        provlist.add("广西壮族自治区");
+
+        provlist.add("江苏省");
+
+        provlist.add("浙江省");
+
+        provlist.add("安徽省");
+
+        provlist.add("江西省");
+
+        provlist.add("福建省");
+
+        MyAdapter myAdapter=new MyAdapter(getActivity(),provlist);
+
+        province_listview.setAdapter(myAdapter);
 
 
-//        province_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//
-//
+        province_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getActivity(), DoctorFragment.class);
+                intent.putExtra("shengfen",provlist.get(i).toString());
+                startActivity(intent);
 //                Toast.makeText(getActivity(),"点击了",Toast.LENGTH_LONG).show();
-//
-//
-//
-//            }
-//        });
+
+            }
+        });
 
 
     }
